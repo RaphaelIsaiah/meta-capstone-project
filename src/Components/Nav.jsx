@@ -17,7 +17,7 @@ export default function Nav() {
         <li>
           <a href="#">Order Online</a>
         </li>
-        <li>Login</li>
+        <li><a href="#">Login</a></li>
       </ul>
     </nav>
   );
