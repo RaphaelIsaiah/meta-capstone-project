@@ -5,10 +5,10 @@ import greekSalad from "../Assets/Images/Greek Salad.png";
 import lemonDessert from "../Assets/Images/Lemon Dessert.png";
 import bruschetta from "../Assets/Images/bruchetta 1.png";
 import bike from "../Assets/Images/delivery bike.png";
-import pp1 from '../Assets/Images/pp 1.png'
-import pp2 from '../Assets/Images/pp 2.png'
-import pp3 from '../Assets/Images/pp 3.png'
-import pp4 from '../Assets/Images/pp 4.png'
+import pp1 from "../Assets/Images/pp 1.png";
+import pp2 from "../Assets/Images/pp 2.png";
+import pp3 from "../Assets/Images/pp 3.png";
+import pp4 from "../Assets/Images/pp 4.png";
 
 export default function Main() {
   return (
@@ -85,11 +85,14 @@ export default function Main() {
             <span>
               ⭐⭐⭐⭐⭐
               <img src={pp1} alt="user" />
-             {/* Color for these texts - #6E6F6E
+              {/* Color for these texts - #6E6F6E
              First p tag is #333333*/}
               <p>Sara Lopez</p>
               <p>Sara72</p>
-              <p>“Seriously cannot stop thinking about the Turkish Mac n' Cheese!!”</p>
+              <p>
+                “Seriously cannot stop thinking about the Turkish Mac n'
+                Cheese!!”
+              </p>
             </span>
           </div>
 
@@ -97,11 +100,13 @@ export default function Main() {
             <span>
               ⭐⭐⭐⭐⭐
               <img src={pp2} alt="user" />
-             {/* Color for these texts - #6E6F6E
+              {/* Color for these texts - #6E6F6E
              First p tag is #333333*/}
               <p>John Do</p>
               <p>Johnny_Utah</p>
-              <p>“We had such a great time celebrating my grandmothers birthday!”</p>
+              <p>
+                “We had such a great time celebrating my grandmothers birthday!”
+              </p>
             </span>
           </div>
 
@@ -109,7 +114,7 @@ export default function Main() {
             <span>
               ⭐⭐⭐⭐⭐
               <img src={pp3} alt="user" />
-             {/* Color for these texts - #6E6F6E
+              {/* Color for these texts - #6E6F6E
              First p tag is #333333*/}
               <p>Grace Ally</p>
               <p>Grace_Ally</p>
@@ -121,7 +126,7 @@ export default function Main() {
             <span>
               ⭐⭐⭐⭐⭐
               <img src={pp4} alt="user" />
-             {/* Color for these texts - #6E6F6E
+              {/* Color for these texts - #6E6F6E
              First p tag is #333333*/}
               <p>Peter Mike</p>
               <p>Pete-33</p>
