@@ -20,13 +20,17 @@ export default function Main() {
           We are a family owned Mediterranean restaurant, focused on traditional
           recipes served with a mordern twist.
         </p>
-        <button>Reserve a Table</button>
+        <button>
+          <a href="#">Reserve a Table</a>
+        </button>
         <img src={hero} alt="Chef with food" width={328} height={360} />
       </section>
 
       <section>
         <h3>This weeks specials!</h3>
-        <button>Online Menu</button>
+        <button>
+          <a href="#">Online Menu</a>
+        </button>
         <article>
           <div>
             <img src={greekSalad} alt="Greek Salad" />
@@ -39,7 +43,10 @@ export default function Main() {
                 rosemary croutons.
               </p>
               <button>
-                Order a delivery <img src={bike} alt="Delivery bike" />
+                <a href="#">
+                  {" "}
+                  Order a delivery <img src={bike} alt="Delivery bike" />
+                </a>
               </button>
             </span>
           </div>
@@ -54,7 +61,10 @@ export default function Main() {
                 with garlic and seasoned with salt and olive oil.
               </p>
               <button>
-                Order a delivery <img src={bike} alt="Delivery bike" />
+                <a href="#">
+                  {" "}
+                  Order a delivery <img src={bike} alt="Delivery bike" />
+                </a>
               </button>
             </span>
           </div>
@@ -70,7 +80,10 @@ export default function Main() {
                 imagined.
               </p>
               <button>
-                Order a delivery <img src={bike} alt="Delivery bike" />
+                <a href="#">
+                  {" "}
+                  Order a delivery <img src={bike} alt="Delivery bike" />
+                </a>
               </button>
             </span>
           </div>
