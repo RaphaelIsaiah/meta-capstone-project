@@ -7,7 +7,7 @@ export default function Footer() {
 
       <section>
         <p>Doormat Navigation Links</p>
-        <ul>
+        <ul className="f-links">
           <li>
             <a href="#">Home</a>
           </li>

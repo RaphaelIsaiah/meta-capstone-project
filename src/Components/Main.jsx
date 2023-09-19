@@ -12,7 +12,7 @@ import pp4 from "../Assets/Images/pp 4.png";
 
 export default function Main() {
   return (
-    <main className="App">
+    <main className="App container">
       <section>
         <p>Little Lemon</p>
         <p>Chicago</p>
@@ -26,12 +26,12 @@ export default function Main() {
         <img src={hero} alt="Chef with food" width={328} height={360} />
       </section>
 
-      <section>
+      <article>
         <h3>This weeks specials!</h3>
         <button>
           <a href="#">Online Menu</a>
         </button>
-        <article>
+        <section>
           <div>
             <img src={greekSalad} alt="Greek Salad" />
             <span>
@@ -87,8 +87,8 @@ export default function Main() {
               </button>
             </span>
           </div>
-        </article>
-      </section>
+        </section>
+      </article>
 
       <section>
         <h3>Testimonials from Customers</h3>

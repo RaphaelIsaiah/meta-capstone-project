@@ -1,7 +1,9 @@
+import React from "react";
+
 export default function Nav() {
   return (
-    <nav className="App">
-      <ul>
+    <nav>
+      <ul className="N-links">
         <li>
           <a href="#">Home</a>
         </li>
