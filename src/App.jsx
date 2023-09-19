@@ -9,7 +9,7 @@ function App() {
     // I had used React.Fragment here with the className and it was not responding to the styling
  
     <>
-    <div className="Container">
+    <div className="App-container">
       <Header />
       <Nav />
       <Main />

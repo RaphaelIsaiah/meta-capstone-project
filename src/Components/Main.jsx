@@ -12,21 +12,24 @@ import pp4 from "../Assets/Images/pp 4.png";
 
 export default function Main() {
   return (
-    <main className="App container">
-      <section>
-        <p>Little Lemon</p>
-        <p>Chicago</p>
-        <p>
-          We are a family owned Mediterranean restaurant, focused on traditional
-          recipes served with a mordern twist.
-        </p>
-        <button>
-          <a href="#">Reserve a Table</a>
-        </button>
-        <img src={hero} alt="Chef with food" width={328} height={360} />
+    <main className="Main-container">
+      <section className="Main-hero">
+        <div className="Hero-bcgd">
+        <img src={hero} alt="Chef with food" className="Hero-img" width={328} height={360} />
+        {/* I'm having a problem styling this image to the design and also making it responsive */}
+          <p className="Hero-ll">Little Lemon</p>
+          <p className="Hero-ch">Chicago</p>
+          <p className="Hero-des">
+            We are a family owned Mediterranean restaurant, focused on
+            traditional recipes served with a mordern twist.
+          </p>
+          <button className="Reserve-btn">
+            <a href="#">Reserve a Table</a>
+          </button>
+        </div>
       </section>
 
-      <article>
+      <article className="Main-specials">
         <h3>This weeks specials!</h3>
         <button>
           <a href="#">Online Menu</a>
@@ -90,7 +93,7 @@ export default function Main() {
         </section>
       </article>
 
-      <section>
+      <section className="Main-testimonials">
         <h3>Testimonials from Customers</h3>
         {/* Pending work */}
         <article>
@@ -149,7 +152,7 @@ export default function Main() {
         </article>
       </section>
 
-      <section>
+      <section className="Main-about">
         <p>About Little Lemon</p>
         <p>Chicago</p>
         <p>
