@@ -274,14 +274,77 @@ main {
   font-family: "Karla", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  color: #EE9972;
+  color: #ee9972;
 }
-.Card-text p{
+.Card-text p {
   color: #333333;
   font-family: "Karla", sans-serif;
   font-size: 16px;
   font-weight: 400;
-
+}
+/* ---Testimonials section---- */
+.Main-testimonials {
+  background-color: #edefee;
+  width: 100%;
+  padding: 10px;
+}
+.Main-testimonials h3 {
+  /* background-color: chocolate; */
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+.Review-display {
+  /* background-color: rgb(20, 24, 27); */
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  margin: 5vh auto 7vh;
+  padding: 2rem;
+}
+.review-card {
+  background-color: #ffffff;
+  max-width: 200px;
+  height: 165px;
+  border-radius: 16px;
+  padding: 1vh;
+  margin: 2vh auto 2vh;
+}
+.review-closure {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5px;
+}
+.username,
+.name,
+.review-text {
+  color: #6e6f6e;
+  font-family: "Karla", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+}
+.name {
+  color: #333333;
+}
+.review-text {
+  font-weight: 400;
+  margin-bottom: 2vh;
+}
+.stars {
+  /* background-color: #333333; */
+  width: fit-content;
+}
+.profile {
+  display: flex;
+  margin: 20px 0 20px;
+}
+[alt="user"] {
+  margin-right: 10px;
 }
 /* -------Footer styling----------*/
 footer {
@@ -289,29 +352,40 @@ footer {
   grid-column: 1 / span 12;
 }
 
+/* Media Queries */
 @media only screen and (max-width: 800px) {
+  /* ---Main-Specials section--- */
   .Meal-display {
     display: grid;
     gap: 20px;
     width: 100%;
+    color: #333333;
+    padding: 1vw;
   }
   .Meal-card {
     width: 100%;
     max-width: 600px;
   }
-  .Meal-img{
-    max-width: 85%;
+  .Meal-img {
+    max-width: 100%;
     max-height: 50%;
   }
-  .Spec-n-btn{
+  .Spec-n-btn {
     width: 100%;
   }
-  .online-menu{
+  .online-menu {
     margin: 1.5vh 6vw 2vh 10vw;
   }
-  .Card-text{
+  .Card-text {
     width: 80%;
     max-width: 470px;
     margin: auto;
+  }
+  /* ----Testimonial section---- */
+  .Review-display {
+    width: 100%;
+  }
+  .review-card {
+    margin: 1vh auto 1vh;
   }
 }

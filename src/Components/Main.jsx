@@ -35,7 +35,7 @@ export default function Main() {
           </button>
         </div>
       </section>
-      {/* This Hero section needs to be reviewed and styled properly for a more responsive look. */}
+      {/* ----This Hero section needs to be reviewed and styled properly for a more responsive look.---- */}
 
       <section className="Specials-container">
         <article className="Main-specials">
@@ -115,63 +115,77 @@ export default function Main() {
       {/* This section is done and responsive */}
 
       <section className="Main-testimonials">
-        <h3>Testimonials from Customers</h3>
+        <h3>Testimonials</h3>
         {/* Pending work */}
-        <article>
-          <div>
-            <span>
-              ⭐⭐⭐⭐⭐
-              <img src={pp1} alt="user" />
-              {/* Color for these texts - #6E6F6E
-             First p tag is #333333*/}
-              <p>Sara Lopez</p>
-              <p>Sara72</p>
-              <p>
+        <article className="Review-display">
+          <div className="review-card">
+            <div className="review-closure">
+              {" "}
+              <span className="stars">⭐⭐⭐⭐⭐</span>
+              <div className="profile">
+                <img src={pp1} alt="user" />
+                <div>
+                  <p className="name">Sara Lopez</p>
+                  <p className="username">Sara72</p>
+                </div>
+              </div>
+              <p className="review-text">
                 “Seriously cannot stop thinking about the Turkish Mac n'
                 Cheese!!”
               </p>
-            </span>
+            </div>
           </div>
 
-          <div>
-            <span>
-              ⭐⭐⭐⭐⭐
-              <img src={pp2} alt="user" />
-              {/* Color for these texts - #6E6F6E
-             First p tag is #333333*/}
-              <p>John Do</p>
-              <p>Johnny_Utah</p>
-              <p>
+          <div className="review-card">
+            <div className="review-closure">
+              <span className="stars">⭐⭐⭐⭐⭐</span>
+              <div className="profile">
+                <img src={pp2} alt="user" />
+                <div>
+                  <p className="name">John Do</p>
+                  <p className="username">Johnny_Utah</p>
+                </div>
+              </div>
+              <p className="review-text">
                 “We had such a great time celebrating my grandmothers birthday!”
               </p>
-            </span>
+            </div>
           </div>
 
-          <div>
-            <span>
-              ⭐⭐⭐⭐⭐
-              <img src={pp3} alt="user" />
-              {/* Color for these texts - #6E6F6E
-             First p tag is #333333*/}
-              <p>Grace Ally</p>
-              <p>Grace_Ally</p>
-              <p>“Best Feta Salad in town. Flawless everytime!”</p>
-            </span>
+          <div className="review-card">
+            <div className="review-closure">
+              <span className="stars">⭐⭐⭐⭐⭐</span>
+              <div className="profile">
+                <img src={pp3} alt="user" />
+                <div>
+                  <p className="name">Grace Ally</p>
+                  <p className="username">Grace_Ally</p>
+                </div>
+              </div>
+              <p className="review-text">
+                “Best Feta Salad in town. Flawless everytime!”
+              </p>
+            </div>
           </div>
 
-          <div>
-            <span>
-              ⭐⭐⭐⭐⭐
-              <img src={pp4} alt="user" />
-              {/* Color for these texts - #6E6F6E
-             First p tag is #333333*/}
-              <p>Peter Mike</p>
-              <p>Pete-33</p>
-              <p>“Such a chilled out atmosphere - love it!”</p>
-            </span>
+          <div className="review-card">
+            <div className="review-closure">
+              <span className="stars">⭐⭐⭐⭐⭐</span>
+              <div className="profile">
+                <img src={pp4} alt="user" />
+                <div>
+                  <p className="name">Peter Mike</p>
+                  <p className="username">Pete-33</p>
+                </div>
+              </div>
+              <p className="review-text">
+                “Such a chilled out atmosphere - love it!”
+              </p>
+            </div>
           </div>
         </article>
       </section>
+      {/* Testimonial Section is done and responsive with very minimal media queries. */}
 
       <section className="Main-about">
         <p>About Little Lemon</p>
