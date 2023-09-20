@@ -14,84 +14,105 @@ export default function Main() {
   return (
     <main className="Main-container">
       <section className="Main-hero">
+        {/* This section is partly done... Proper alignment and mobile responsiveness are pending. */}
         <div className="Hero-bcgd">
-        <img src={hero} alt="Chef with food" className="Hero-img" width={328} height={360} />
-        {/* I'm having a problem styling this image to the design and also making it responsive */}
+          <img
+            src={hero}
+            alt="Chef with food"
+            className="Hero-img"
+            width={328}
+            height={360}
+          />
+          {/* I'm having a problem styling this image to the design and also making it responsive */}
           <p className="Hero-ll">Little Lemon</p>
           <p className="Hero-ch">Chicago</p>
           <p className="Hero-des">
             We are a family owned Mediterranean restaurant, focused on
-            traditional recipes served with a mordern twist.
+            traditional recipes served with a modern twist.
           </p>
-          <button className="Reserve-btn">
+          <button className="LL-btn">
             <a href="#">Reserve a Table</a>
           </button>
         </div>
       </section>
+      {/* This Hero section needs to be reviewed and styled properly for a more responsive look. */}
 
-      <article className="Main-specials">
-        <h3>This weeks specials!</h3>
-        <button>
-          <a href="#">Online Menu</a>
-        </button>
-        <section>
-          <div>
-            <img src={greekSalad} alt="Greek Salad" />
-            <span>
-              <p>Greek Salad</p>
-              <p>$12.99</p>
-              <p>
-                The famous greek salad of crispy lettuce, peppers, olives and
-                our Chicago style feta cheese, garnished with crunchy garlic and
-                rosemary croutons.
-              </p>
-              <button>
-                <a href="#">
-                  {" "}
-                  Order a delivery <img src={bike} alt="Delivery bike" />
-                </a>
-              </button>
-            </span>
-          </div>
+      <section className="Specials-container">
+        <article className="Main-specials">
+          <div className="Spec-n-btn">
+            <h3 className="Highlights-txt">This weeks specials!</h3>
+            <button className="LL-btn online-menu">
+              <a href="#">Online Menu</a>
+            </button>
+          </div>{" "}
+          {/*This is done and responsive... I am noting the method used in styling this div.*/}
+          <section className="Meal-display">
+            <div className="Meal-card">
+              <img src={greekSalad} alt="Greek Salad" className="Meal-img" />
+              <div className="meal-n-price Greek">
+                <p className="food-name">Greek Salad</p>
+                <p className="food-price">$12.99</p>
+              </div>
+              <span className="Card-text">
+                <p>
+                  The famous greek salad of crispy lettuce, peppers, olives and
+                  our Chicago style feta cheese, garnished with crunchy garlic
+                  and rosemary croutons.
+                </p>
+              </span>
+              <a href="#" className="Order-link restore">
+                {" "}
+                Order a delivery{" "}
+                <img src={bike} alt="Delivery bike" className="bike" />
+              </a>
+            </div>
 
-          <div>
-            <img src={bruschetta} alt="Bruschetta" />
-            <span>
-              <p>Bruschetta</p>
-              <p>$5.99</p>
-              <p>
-                Our bruschetta is made from grilled bread that has been smeared
-                with garlic and seasoned with salt and olive oil.
-              </p>
-              <button>
-                <a href="#">
-                  {" "}
-                  Order a delivery <img src={bike} alt="Delivery bike" />
-                </a>
-              </button>
-            </span>
-          </div>
+            <div className="Meal-card">
+              <img src={bruschetta} alt="Bruschetta" className="Meal-img" />
+              <div className="meal-n-price">
+                <p className="food-name">Bruschetta</p>
+                <p className="food-price">$5.99</p>
+              </div>
+              <span className="Card-text">
+                <p>
+                  Our bruschetta is made from grilled bread that has been
+                  smeared with garlic and seasoned with salt and olive oil.
+                </p>
+              </span>
+              <a href="#" className="Order-link">
+                {" "}
+                Order a delivery{" "}
+                <img src={bike} alt="Delivery bike" className="bike" />
+              </a>
+            </div>
 
-          <div>
-            <img src={lemonDessert} alt="Lemon Dessert" />
-            <span>
-              <p>Lemon Dessert</p>
-              <p>$5.00</p>
-              <p>
-                This comes straight from grandma's recipe book, every last
-                ingredient has been sourced and is as authentic as can be
-                imagined.
-              </p>
-              <button>
-                <a href="#">
-                  {" "}
-                  Order a delivery <img src={bike} alt="Delivery bike" />
-                </a>
-              </button>
-            </span>
-          </div>
-        </section>
-      </article>
+            <div className="Meal-card">
+              <img
+                src={lemonDessert}
+                alt="Lemon Dessert"
+                className="Meal-img"
+              />
+              <div className="meal-n-price">
+                <p className="food-name">Lemon Dessert</p>
+                <p className="food-price">$5.00</p>
+              </div>
+              <span className="Card-text">
+                <p>
+                  This comes straight from grandma's recipe book, every last
+                  ingredient has been sourced and is as authentic as can be
+                  imagined.
+                </p>
+              </span>
+              <a href="#" className="Order-link">
+                {" "}
+                Order a delivery{" "}
+                <img src={bike} alt="Delivery bike" className="bike" />
+              </a>
+            </div>
+          </section>
+        </article>
+      </section>
+      {/* This section is done and responsive */}
 
       <section className="Main-testimonials">
         <h3>Testimonials from Customers</h3>

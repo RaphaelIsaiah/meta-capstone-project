@@ -17,7 +17,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(238, 236, 233);
+  background-color: #fff;
 }
 
 /* General styling */
@@ -25,13 +25,12 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
-
 ul li {
   list-style-type: none;
 }
-
 button a,
-li a {
+li a,
+.Order-link {
   text-decoration: none;
   font-family: "Karla", sans-serif;
   font-size: 18px;
@@ -40,7 +39,8 @@ li a {
 .f-links li a {
   font-weight: 500;
 }
-.N-links li a {
+.N-links li a,
+.Order-link {
   font-weight: 700;
 }
 #root {
@@ -101,7 +101,7 @@ nav {
 /*----------- Main content styling------------*/
 /* --------Hero section-------- */
 main {
-  background-color: cornflowerblue;
+  /* background-color: cornflowerblue; */
   grid-column: 1 / span 12;
 }
 .Main-container {
@@ -117,7 +117,7 @@ main {
 }
 .Hero-img {
   grid-column: 12 / span 5;
-  grid-row: 1/ span 5;
+  grid-row: 1 / span 5;
   position: absolute;
   top: 15px;
   justify-self: start;
@@ -154,7 +154,7 @@ main {
   grid-column: 4 / span 6;
   margin-bottom: 15px;
 }
-.Reserve-btn {
+.LL-btn {
   grid-column: 4 / span 6;
   width: 191px;
   padding: 12px 30px;
@@ -165,17 +165,153 @@ main {
   background-color: #f4ce14;
   margin-bottom: 15px;
 }
-.Reserve-btn:hover {
+.LL-btn:hover {
   background-color: #fbdabb;
   cursor: pointer;
 }
-.Reserve-btn a {
+.LL-btn a {
   font-weight: 700;
 }
 /* --------Specials section------- */
+/* Write a media query for Specials section to change to column and fill the container */
+.Specials-container {
+  /* background-color: #f8f3d8; */
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.Main-specials {
+  /* background-color: chartreuse; */
+  width: 100%;
+  margin: 15px auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+.Spec-n-btn {
+  /* background-color: #edefee; */
+  width: 97%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 15px 10px;
+}
+.Highlights-txt {
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0;
+}
+.online-menu {
+  margin-right: 4vw;
+  margin-left: 6vw;
+  margin-top: 1.5vh;
+}
+.Meal-display {
+  /* background-color: #cfddd6; */
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.Meal-card {
+  display: flex;
+  flex-wrap: wrap;
+  width: 29%;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #edefee;
+  border-radius: 8px 8px 0 0;
+}
+.Card-text {
+  max-width: 215px;
+  margin: auto;
+}
+.Meal-img {
+  width: 100%;
+  max-width: 260px;
+  max-height: 185px;
+  margin: 0 auto;
+}
 
+.meal-n-price {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  /* background-color: burlywood; */
+  margin: auto;
+}
+.Greek {
+  margin: 4vh auto 2vh;
+  /* background-color: #f4ce14; */
+}
+.Card-text p {
+  text-align: left;
+  margin: auto;
+}
+
+.bike {
+  margin: 1vh 0 0 1vw;
+}
+.Order-link {
+  width: 80%;
+  /* background-color: burlywood; */
+  margin: 4vh auto;
+  text-align: left;
+}
+.restore {
+  padding: 0.1vh 0 2vh;
+  /* This is to restore the abnormal spacing that occurred */
+}
+.food-name {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #333333;
+}
+.food-price {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #EE9972;
+}
+.Card-text p{
+  color: #333333;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+
+}
 /* -------Footer styling----------*/
 footer {
   background-color: tomato;
   grid-column: 1 / span 12;
+}
+
+@media only screen and (max-width: 800px) {
+  .Meal-display {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+  }
+  .Meal-card {
+    width: 100%;
+    max-width: 600px;
+  }
+  .Meal-img{
+    max-width: 85%;
+    max-height: 50%;
+  }
+  .Spec-n-btn{
+    width: 100%;
+  }
+  .online-menu{
+    margin: 1.5vh 6vw 2vh 10vw;
+  }
+  .Card-text{
+    width: 80%;
+    max-width: 470px;
+    margin: auto;
+  }
 }
