@@ -188,17 +188,23 @@ export default function Main() {
       {/* Testimonial Section is done and responsive with very minimal media queries. */}
 
       <section className="Main-about">
-        <p>About Little Lemon</p>
-        <p>Chicago</p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, unde
-          placeat pariatur quae doloremque iste accusamus odio ipsam harum nihil
-          delectus blanditiis dignissimos repellat nam esse ratione voluptates
-          distinctio! Odit. Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Magnam, minima aliquam est eum sequi molestiae sit.
-        </p>
-        <img src={chef1} alt="Little Lemon Owners" />
-        <img src={chef2} alt="Little Lemon Owners" />
+        {/* test may delete this... */}
+        <div className="About-closure">
+          <div className="About-text">
+            <p className="A-ll">Little Lemon</p>
+            <p className="A-ch">Chicago</p>
+            <p className="A-txt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
+              unde placeat pariatur quae doloremque iste accusamus odio ipsam
+              harum nihil delectus blanditiis dignissimos repellat nam esse
+              ratione voluptates distinctio! Odit. Lorem ipsum dolor sit amet
+            </p>
+          </div>
+          <div className="About-images">
+            <img src={chef1} alt="Little Lemon Owners" className="chef1" />
+            <img src={chef2} alt="Little Lemon Owners" className="chef2" />
+          </div>
+        </div>
       </section>
     </main>
   );

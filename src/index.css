@@ -222,7 +222,7 @@ main {
   max-width: 300px;
   margin: 0 auto;
   background-color: #edefee;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px;
 }
 .Card-text {
   max-width: 215px;
@@ -287,6 +287,7 @@ main {
   background-color: #edefee;
   width: 100%;
   padding: 10px;
+  margin: auto;
 }
 .Main-testimonials h3 {
   /* background-color: chocolate; */
@@ -297,7 +298,7 @@ main {
 }
 .Review-display {
   /* background-color: rgb(20, 24, 27); */
-  width: 75%;
+  width: 70%;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
@@ -311,6 +312,7 @@ main {
   border-radius: 16px;
   padding: 1vh;
   margin: 2vh auto 2vh;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
 }
 .review-closure {
   width: 90%;
@@ -346,9 +348,79 @@ main {
 [alt="user"] {
   margin-right: 10px;
 }
+/*----About Little Lemon---- */
+.Main-about {
+  padding: 2rem;
+  width: 100%;
+  margin: auto;
+
+}
+.About-closure {
+  display: flex;
+  width: 70%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: 0 auto 30vh;
+  /* background-color: aqua; */
+}
+.About-text {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: left;
+  max-width: 40%;
+  /* background-color: #928c6f; */
+}
+.About-text p {
+  text-align: left;
+}
+.About-images {
+  width: 52%;
+  display: flex;
+  flex-flow: row wrap;
+  position: relative;
+  /* background-color: #ee9972; */
+}
+.About-images img {
+  max-width: 250px;
+  margin: auto;
+}
+.A-ll {
+  font-family: "Markazi Text", serif;
+  font-size: 64px;
+  color: #f4ce14;
+  font-weight: 500;
+}
+.A-ch {
+  font-family: "Markazi Text", serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: #333333;
+  margin-top: -1.3rem;
+}
+.A-txt {
+  color: #333333;
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  width: 100%;
+  max-width: 100%;
+  font-weight: 700;
+}
+.chef1 {
+  z-index: 1;
+  position: absolute;
+  top: 23vh;
+  left: 0.6vw;
+}
+.chef2 {
+  z-index: 2;
+  position: absolute;
+  left: 14vw;
+  top: 2vh;
+}
+
 /* -------Footer styling----------*/
 footer {
-  background-color: tomato;
+  background-color: #edefee;
   grid-column: 1 / span 12;
 }
 
@@ -388,4 +460,29 @@ footer {
   .review-card {
     margin: 1vh auto 1vh;
   }
+  /* ----About section---- */
+  .About-closure{
+    width: 90%;
+    margin-bottom: 56vh;
+  }
+  .About-text {
+    max-width: 100%;
+    width: 100%;
+  }
+  .About-images{
+    width: 100%;
+  }
+  .chef1 {
+    z-index: 0;
+    position: absolute;
+    top: 23vh;
+    left: 0;
+  }
+  .chef2 {
+    z-index: 0;
+    position: absolute;
+    left: 8vw;
+    top: 2vh;
+  }
+
 }
