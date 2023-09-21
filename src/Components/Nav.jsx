@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Nav() {
   return (
-    <nav>
+    <nav className="Nav">
       <ul className="N-links">
         <li>
           <a href="#">Home</a>

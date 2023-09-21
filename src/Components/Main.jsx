@@ -205,7 +205,10 @@ export default function Main() {
             <img src={chef2} alt="Little Lemon Owners" className="chef2" />
           </div>
         </div>
+        {/* Implemented and responsive... though I am still thinking of a better way to manage the images
+        I think I have found a way around the images... I am still open to better ways to improve the design.*/}
       </section>
     </main>
+    //What is left here is the hero section... and also the header and navigation bar.
   );
 }
