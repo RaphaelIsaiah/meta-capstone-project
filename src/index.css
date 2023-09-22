@@ -60,34 +60,49 @@ footer {
 
 /* ------------Header styling----------- */
 header {
-  /* background-color: aquamarine; */
   display: flex;
-  grid-column: 1 / span 5;
-  justify-content: space-evenly;
+  grid-column: 1 / span 4;
+  justify-content: right;
+  /* background-color: rgb(121, 134, 134); */
 }
-header img {
-  max-width: 250px;
-  max-height: 55px;
-  margin: auto;
+.H-img-closure {
+  /* background-color: #50e050; */
+  display: flex;
+  width: 70%;
+  height: 45px;
+  justify-content: left;
+}
+.H-img-closure img {
+  width: 70%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  /* background-color: rgb(58, 199, 152); */
 }
 
 /* --------Nav menu styling----------- */
-Nav {
+.Nav {
   /* background-color: cadetblue; */
-  grid-column: 6 / span 7;
+  grid-column: 5 / span 7;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
+  justify-content: flex-end;
+  padding: 2.5vh 1.5vw 1vh;
+}
+.faBars {
+  color: #333333;
 }
 .N-links {
+  width: 95%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
-  margin: 20px 10px;
+  justify-content: space-around;
+  margin: 1vh 0px;
+  /* background-color: #ee9972; */
 }
 .N-links a {
+  /* background-color: #f4ce14; */
   display: inline-block;
   text-align: center;
   padding: 6px 10px;
@@ -113,7 +128,7 @@ main {
   margin: auto;
   padding: 2rem 2rem 0;
   max-height: 17%;
-  background-color: #495e57 ;
+  background-color: #495e57;
 }
 .Hero-closure {
   /* background-color: #208563; */
@@ -196,12 +211,13 @@ main {
 /* Write a media query for Specials section to change to column and fill the container */
 .Specials-container {
   /* background-color: #f8f3d8; */
-  max-width: 1000px;
+  width: 100%;
+  max-width: 100%;
   margin: 50px auto;
 }
 .Main-specials {
   /* background-color: chartreuse; */
-  width: 100%;
+  width: 80%;
   margin: 15px auto;
   display: flex;
   flex-flow: column wrap;
@@ -238,19 +254,21 @@ main {
 .Meal-card {
   display: flex;
   flex-wrap: wrap;
-  width: 29%;
-  max-width: 300px;
+  width: 30%;
+  max-width: 100%;
   margin: 0 auto;
   background-color: #edefee;
   border-radius: 8px;
+  height: auto;
 }
 .Card-text {
   max-width: 215px;
   margin: auto;
+  /* background-color: rgb(247, 205, 150); */
 }
 .Meal-img {
   width: 100%;
-  max-width: 260px;
+  max-width: 100%;
   max-height: 185px;
   margin: 0 auto;
 }
@@ -499,37 +517,45 @@ footer {
   /* background-color: crimson; */
   line-height: 28px;
 }
+
 /* Media Queries */
 @media only screen and (max-width: 800px) {
+  /* ---- Header Section--- */
+  .H-img-closure {
+    width: 100%;
+  }
+  .H-img-closure img {
+    width: 100%;
+  }
   /* ---Hero Section--- */
-  .Hero-closure{
+  .Hero-closure {
     width: 95%;
   }
   .H-txt-btn {
     width: 100%;
     max-width: fit-content;
   }
-  .Hero-ch{
+  .Hero-ch {
     margin-bottom: 10px;
   }
-  .Hero-des{
+  .Hero-des {
     width: 100%;
     height: 100%;
   }
-  .btn-hold{
+  .btn-hold {
     margin: auto;
     margin-bottom: 1vh;
   }
-  .table{
+  .table {
     width: 100%;
     margin: auto;
     padding: 9px 20px;
   }
-  .Hero-img{
+  .Hero-img {
     margin: auto;
     max-height: 50%;
   }
-  .chef-n-food{
+  .chef-n-food {
     height: 240px;
     max-height: 60%;
     width: 450px;
@@ -544,23 +570,32 @@ footer {
     padding: 1vw;
   }
   .Meal-card {
-    width: 100%;
+    width: 90%;
     max-width: 600px;
+    /* height: fit-content; */
   }
   .Meal-img {
     max-width: 100%;
     max-height: 50%;
   }
+  .meal-n-price {
+    margin-top: 1vh;
+  }
   .Spec-n-btn {
     width: 100%;
+    justify-content: space-around;
   }
   .online-menu {
     margin: 1.5vh 6vw 2vh 10vw;
   }
   .Card-text {
     width: 80%;
-    max-width: 470px;
+    max-width: 100%;
     margin: auto;
+    padding: 1rem;
+  }
+  .Order-link {
+    margin-bottom: 2vh;
   }
   /* ----Testimonial section---- */
   .Review-display {
@@ -598,4 +633,3 @@ footer {
     top: 2vh;
   }
 }
-/* @media only screen and (max-width: 8px) */
