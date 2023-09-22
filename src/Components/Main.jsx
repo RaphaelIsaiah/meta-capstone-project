@@ -24,7 +24,7 @@ export default function Main() {
               traditional recipes served with a modern twist.
             </p>
             <div className="btn-hold">
-              <button className="LL-btn">
+              <button className="LL-btn table">
                 <a href="#">Reserve a Table</a>
               </button>
             </div>

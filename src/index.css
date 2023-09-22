@@ -107,7 +107,6 @@ main {
 .Main-container {
   display: flex;
   flex-flow: column wrap;
-  /* align-items: center; */
 }
 .Main-hero {
   width: 100%;
@@ -124,11 +123,10 @@ main {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  /* padding: 1rem 0 0; */
   position: relative;
 }
 .H-txt-btn {
-  /* margin: auto; */
+  width: fit-content;
   /* background-color: #6e6f6e; */
   height: fit-content;
   max-width: 40%;
@@ -172,8 +170,6 @@ main {
   margin-bottom: 15px;
 }
 .btn-hold {
-  /* justify-items: left; */
-  /* align-items: center; */
   /* background-color: #fff; */
   width: fit-content;
 }
@@ -188,9 +184,7 @@ main {
   /* background-color: brown; */
   max-width: 100%;
   height: fit-content;
-  /* position: absolute; */
   top: 2px;
-  /* margin-top: 1rem; */
 }
 .chef-n-food {
   width: 100%;
@@ -459,7 +453,6 @@ footer {
   display: flex;
   flex-wrap: row wrap;
   /* background-color: violet; */
-  /* padding: 1rem; */
   align-items: center;
   justify-content: space-around;
   margin: 1vh auto 0;
@@ -468,7 +461,6 @@ footer {
   max-width: 20%;
   min-width: 20%;
   /* background-color: #ee9972; */
-  /* margin: auto; */
 }
 .footer-logo img {
   /* background-color: #6e6f6e; */
@@ -480,19 +472,16 @@ footer {
   width: 70%;
   display: flex;
   flex-flow: row wrap;
-  /* align-items: center; */
   justify-content: space-between;
   /* background-color: aquamarine; */
   padding: 2rem;
   height: auto;
-  /* margin: auto; */
 }
 .fnav {
   display: flex;
   flex-flow: column wrap;
   /* background-color: #eb9292; */
   height: 90%;
-  /* max-width: 173px; */
   text-align: left;
   justify-content: left;
   place-items: left;
@@ -509,14 +498,16 @@ footer {
 .f-links {
   /* background-color: crimson; */
   line-height: 28px;
-  /* margin-top: 1vh; */
 }
 /* Media Queries */
 @media only screen and (max-width: 800px) {
   /* ---Hero Section--- */
+  .Hero-closure{
+    width: 95%;
+  }
   .H-txt-btn {
     width: 100%;
-    max-width: 100%;
+    max-width: fit-content;
   }
   .Hero-ch{
     margin-bottom: 10px;
@@ -527,6 +518,12 @@ footer {
   }
   .btn-hold{
     margin: auto;
+    margin-bottom: 1vh;
+  }
+  .table{
+    width: 100%;
+    margin: auto;
+    padding: 9px 20px;
   }
   .Hero-img{
     margin: auto;
@@ -537,7 +534,6 @@ footer {
     max-height: 60%;
     width: 450px;
     max-width: 100%;
-    /* max-height: 70%; */
   }
   /* ---Main-Specials section--- */
   .Meal-display {
