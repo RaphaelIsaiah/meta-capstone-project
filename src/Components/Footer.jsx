@@ -12,22 +12,22 @@ export default function Footer() {
             <p>Doormat Navigation</p>
             <ul className="f-links">
               <li>
-                <a href="#">Home</a>
+                <a href="#" className="a-tag">Home</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="#" className="a-tag">About</a>
               </li>
               <li>
-                <a href="#">Menu</a>
+                <a href="#" className="a-tag">Menu</a>
               </li>
               <li>
-                <a href="#">Reservations</a>
+                <a href="#" className="a-tag">Reservations</a>
               </li>
               <li>
-                <a href="#">Order Online</a>
+                <a href="#" className="a-tag">Order Online</a>
               </li>
               <li>
-                <a href="#">Login</a>
+                <a href="#" className="a-tag">Login</a>
               </li>
             </ul>
           </div>
@@ -36,13 +36,13 @@ export default function Footer() {
             <p>Contact</p>
             <ul className="f-links">
               <li>
-                <a href="#">Address</a>
+                <a href="#" className="a-tag">Address</a>
               </li>
               <li>
-                <a href="#">Phone number</a>
+                <a href="#" className="a-tag">Phone number</a>
               </li>
               <li>
-                <a href="#">Email</a>
+                <a href="#" className="a-tag">Email</a>
               </li>
             </ul>
           </div>
@@ -51,13 +51,13 @@ export default function Footer() {
             <p>Social Media Links</p>
             <ul className="f-links">
               <li>
-                <a href="#">Address</a>
+                <a href="#" className="a-tag">Address</a>
               </li>
               <li>
-                <a href="#">Phone number</a>
+                <a href="#" className="a-tag">Phone number</a>
               </li>
               <li>
-                <a href="#">Email</a>
+                <a href="#" className="a-tag">Email</a>
               </li>
             </ul>
           </div>

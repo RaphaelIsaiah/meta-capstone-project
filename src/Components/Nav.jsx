@@ -16,22 +16,22 @@ export default function Nav() {
       {/* <FontAwesomeIcon icon={faBars} /> */}
       <ul className="N-links">
         <li>
-          <a href="#">Home</a>
+          <a href="#" className="a-tag N-a">Home</a>
         </li>
         <li>
-          <a href="#">About</a>
+          <a href="#" className="a-tag N-a">About</a>
         </li>
         <li>
-          <a href="#">Menu</a>
+          <a href="#" className="a-tag N-a">Menu</a>
         </li>
         <li>
-          <a href="#">Reservations</a>
+          <a href="#" className="a-tag N-a">Reservations</a>
         </li>
         <li>
-          <a href="#">Order Online</a>
+          <a href="#" className="a-tag N-a">Order Online</a>
         </li>
         <li>
-          <a href="#">Login</a>
+          <a href="#" className="a-tag N-a">Login</a>
         </li>
       </ul>
     </nav>

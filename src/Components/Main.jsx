@@ -25,7 +25,9 @@ export default function Main() {
             </p>
             <div className="btn-hold">
               <button className="LL-btn table">
-                <a href="#">Reserve a Table</a>
+                <a href="#" className="a-tag">
+                  Reserve a Table
+                </a>
               </button>
             </div>
           </div>
@@ -48,7 +50,9 @@ export default function Main() {
           <div className="Spec-n-btn">
             <h3 className="Highlights-txt">This weeks specials!</h3>
             <button className="LL-btn online-menu">
-              <a href="#">Online Menu</a>
+              <a href="#" className="a-tag">
+                Online Menu
+              </a>
             </button>
           </div>{" "}
           {/*This is done and responsive... I am noting the method used in styling this div.*/}

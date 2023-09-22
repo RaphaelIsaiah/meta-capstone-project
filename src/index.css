@@ -28,18 +28,18 @@ body {
 ul li {
   list-style-type: none;
 }
-button a,
-li a,
+button .a-tag,
+li .a-tag,
 .Order-link {
   text-decoration: none;
   font-family: "Karla", sans-serif;
   font-size: 18px;
   color: #333333;
 }
-.f-links li a {
+.f-links li .a-tag {
   font-weight: 500;
 }
-.N-links li a,
+.N-links li .a-tag,
 .Order-link {
   font-weight: 700;
 }
@@ -101,14 +101,14 @@ header {
   margin: 1vh 0px;
   /* background-color: #ee9972; */
 }
-.N-links a {
+.N-links .a-tag {
   /* background-color: #f4ce14; */
   display: inline-block;
   text-align: center;
   padding: 6px 10px;
   margin: 0 5px;
 }
-.N-links a:hover {
+.N-links .a-tag:hover {
   border-bottom: 2px solid #f4ce14;
   padding: 1px 10px 0 10px; /*This padding helped me to control the height change that occurred on hover*/
 }
@@ -192,7 +192,7 @@ main {
   background-color: #fbdabb;
   cursor: pointer;
 }
-.LL-btn a {
+.LL-btn .a-tag {
   font-weight: 700;
 }
 .Hero-img {
@@ -526,6 +526,11 @@ footer {
   }
   .H-img-closure img {
     width: 100%;
+  }
+  /* ----Navigation Section---- */
+  .N-links{
+    /* flex-direction: column wrap; */
+    justify-content: center;
   }
   /* ---Hero Section--- */
   .Hero-closure {
