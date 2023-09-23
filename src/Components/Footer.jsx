@@ -1,3 +1,4 @@
+import React from "react";
 import footerlogo from "../Assets/Images/footerlogo.png";
 
 export default function Footer() {
@@ -12,22 +13,34 @@ export default function Footer() {
             <p>Doormat Navigation</p>
             <ul className="f-links">
               <li>
-                <a href="#" className="a-tag">Home</a>
+                <a href="#" className="a-tag">
+                  Home
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">About</a>
+                <a href="#" className="a-tag">
+                  About
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Menu</a>
+                <a href="#" className="a-tag">
+                  Menu
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Reservations</a>
+                <a href="#" className="a-tag">
+                  Reservations
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Order Online</a>
+                <a href="#" className="a-tag">
+                  Order Online
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Login</a>
+                <a href="#" className="a-tag">
+                  Login
+                </a>
               </li>
             </ul>
           </div>
@@ -36,13 +49,19 @@ export default function Footer() {
             <p>Contact</p>
             <ul className="f-links">
               <li>
-                <a href="#" className="a-tag">Address</a>
+                <a href="#" className="a-tag">
+                  Address
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Phone number</a>
+                <a href="#" className="a-tag">
+                  Phone number
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Email</a>
+                <a href="#" className="a-tag">
+                  Email
+                </a>
               </li>
             </ul>
           </div>
@@ -51,13 +70,19 @@ export default function Footer() {
             <p>Social Media Links</p>
             <ul className="f-links">
               <li>
-                <a href="#" className="a-tag">Address</a>
+                <a href="#" className="a-tag">
+                  Address
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Phone number</a>
+                <a href="#" className="a-tag">
+                  Phone number
+                </a>
               </li>
               <li>
-                <a href="#" className="a-tag">Email</a>
+                <a href="#" className="a-tag">
+                  Email
+                </a>
               </li>
             </ul>
           </div>

@@ -23,7 +23,7 @@ body {
 /* General styling */
 .App-container {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  /* grid-template-columns: repeat(12, 1fr); */
 }
 ul li {
   list-style-type: none;
@@ -56,6 +56,11 @@ footer {
   place-items: center;
   text-align: center;
   grid-template-rows: auto;
+}
+/* ---Homepage--- */
+.homepage{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
 }
 
 /* ------------Header styling----------- */
@@ -528,8 +533,7 @@ footer {
     width: 100%;
   }
   /* ----Navigation Section---- */
-  .N-links{
-    /* flex-direction: column wrap; */
+  .N-links {
     justify-content: center;
   }
   /* ---Hero Section--- */
