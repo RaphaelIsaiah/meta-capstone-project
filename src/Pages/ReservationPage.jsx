@@ -1,8 +1,8 @@
 import React from "react";
-import Header from "./Header";
-import Nav from "./Nav";
-import Footer from "./Footer";
-import Testimonials from "./Testimonials";
+import Header from "../Components/Header";
+import Nav from "../Components/Nav";
+import Footer from "../Components/Footer";
+import Testimonials from "../Components/Testimonials";
 
 function Reservation() {
   return (
