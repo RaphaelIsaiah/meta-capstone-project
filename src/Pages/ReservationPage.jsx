@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header";
 import Nav from "../Components/Nav";
 import Footer from "../Components/Footer";
+import BookingForm from "../Components/BookingForm";
 import Testimonials from "../Components/Testimonials";
 
 function Reservation() {
@@ -9,8 +10,8 @@ function Reservation() {
     <div className="homepage">
       <Header />
       <Nav />
-      <main>
-        <div className="LL-btn"> I AM</div>
+      <main className="Main-container">
+        <BookingForm />
         <Testimonials />
       </main>
       <Footer />

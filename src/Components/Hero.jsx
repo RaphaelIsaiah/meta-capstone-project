@@ -4,7 +4,6 @@ import hero from "../Assets/Images/heroImage.png";
 function Hero() {
   return (
     <section className="Main-hero">
-      {/* This section is partly done... Proper alignment and mobile responsiveness are pending. */}
       <div className="Hero-closure">
         <div className="H-txt-btn">
           <p className="Hero-ll">Little Lemon</p>
