@@ -39,7 +39,20 @@ function BookingForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setForm({ form });
+    setForm({
+      ...form,
+      indoor: "",
+      outdoor: "",
+      fname: "",
+      lname: "",
+      phone: "",
+      email: "",
+      date: "",
+      diners: "4",
+      occasion: "Anniversary",
+      time: "",
+      comment: "",
+    });
     // How do I reset this form.
     // setFname("");
     // setLname("");
@@ -273,7 +286,7 @@ function BookingForm() {
           </div>
         </fieldset>
 
-        <button type="submit" className="form-btn" >
+        <button type="submit" className="form-btn">
           CONFIRM RESERVATION
         </button>
       </form>
