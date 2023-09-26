@@ -3,17 +3,53 @@ import React, { useState } from "react";
 import restaurant from "../Assets/Images/restaurant.png";
 
 function BookingForm() {
-  const [comment, setComment] = useState("");
-  const [fname, setFname] = useState("");
-  const [lname, setLname] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("12:00");
-  const [diners, setDiners] = useState("4");
-  const [occasion, setOccasion] = useState("Anniversary");
+  const [form, setForm] = useState({
+    indoor: "",
+    outdoor: "",
+    fname: "",
+    lname: "",
+    phone: "",
+    email: "",
+    date: "",
+    diners: "4",
+    occasion: "Anniversary",
+    time: "",
+    comment: "",
+  });
+  // const [indoor, setIndoor] = useState("");
+  // const [outdoor, setOutdoor] = useState("");
+  // const [comment, setComment] = useState("");
+  // const [fname, setFname] = useState("");
+  // const [lname, setLname] = useState("");
+  // const [phone, setPhone] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [date, setDate] = useState("");
+  // const [diners, setDiners] = useState("4");
+  // const [occasion, setOccasion] = useState("Anniversary");
+  // const [time, setTime] = useState([
+  //   {
+  //     option1: "17:00",
+  //     option2: "18:00",
+  //     option3: "19:00",
+  //     option4: "20:00",
+  //     option5: "21:00",
+  //     option6: "22:00",
+  //   },
+  // ]);
 
-  // handleSubmit()
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // setForm({ form });
+    // How do I reset this form.
+    // setFname("");
+    // setLname("");
+    // setPhone("");
+    // setEmail("");
+    // setDate("");
+    // setDiners("4");
+    // setOccasion("Anniversary");
+    // setTime("12:00");
+  };
   return (
     <section className="form-section">
       <div className="B-img-closure">
@@ -24,10 +60,7 @@ function BookingForm() {
         />
       </div>
 
-      <form
-        className="form-container"
-        // onSubmit={handleSubmit}
-      >
+      <form className="form-container" onSubmit={handleSubmit}>
         <fieldset className="field-one">
           <div className="radio">
             <div className="seating">
@@ -35,7 +68,13 @@ function BookingForm() {
                 type="radio"
                 id="indoor"
                 name="seating-choice"
-                value="Indoor Seating"
+                value={form.indoor}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    indoor: e.target.value,
+                  })
+                }
               />
               <label htmlFor="indoor" className="seat-choice">
                 Indoor Seating
@@ -46,7 +85,13 @@ function BookingForm() {
                 type="radio"
                 id="outdoor"
                 name="seating-choice"
-                value="Outdoor Seating"
+                value={form.outdoor}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    outdoor: e.target.value,
+                  })
+                }
               />
               <label htmlFor="outdoor" className="seat-choice">
                 Outdoor Seating
@@ -64,22 +109,30 @@ function BookingForm() {
                 min="2023-09-25"
                 max="2024-12-31"
                 className="input-box"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
+                value={form.date}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    date: e.target.value,
+                  })
+                }
               />
             </div>
             <div className="time col">
               <label htmlFor="time">TIME</label>
-              <input
-                type="time"
-                name=""
+              <select
                 id="time"
-                min="10:00"
-                max="21:00"
                 className="input-box"
-                value={time}
-                onChange={(e) => setTime(e.target.value)}
-              />
+                // value={time}
+                // onChange={(e) => setTime(e.target.value)}
+              >
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+                <option></option>
+              </select>
             </div>
           </div>
 
@@ -90,8 +143,13 @@ function BookingForm() {
                 name=""
                 id="occasion"
                 className="input-box"
-                value={occasion}
-                onChange={(e) => setOccasion(e.target.value)}
+                value={form.occasion}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    occasion: e.target.value,
+                  })
+                }
               >
                 <option value="Birthday">Birthday</option>
                 <option value="Anniversary">Anniversary</option>
@@ -107,8 +165,13 @@ function BookingForm() {
                 max="10"
                 id="diners"
                 className="input-box"
-                value={diners}
-                onChange={(e) => setDiners(e.target.value)}
+                value={form.diners}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    diners: e.target.value,
+                  })
+                }
               />
             </div>
             <div className="comment col">
@@ -117,8 +180,13 @@ function BookingForm() {
                 name="comments"
                 id="comments"
                 cols="50"
-                value={comment}
-                onChange={(e) => setComment(e.target.value)}
+                value={form.comment}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    comment: e.target.value,
+                  })
+                }
                 rows="5"
                 placeholder=". . ."
               ></textarea>
@@ -136,8 +204,13 @@ function BookingForm() {
                 name="fname"
                 id="fname"
                 className="input-box"
-                value={fname}
-                onChange={(e) => setFname(e.target.value)}
+                value={form.fname}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    fname: e.target.value,
+                  })
+                }
                 placeholder="John"
               />
             </div>
@@ -149,8 +222,13 @@ function BookingForm() {
                 name="lname"
                 id="lname"
                 className="input-box"
-                value={lname}
-                onChange={(e) => setLname(e.target.value)}
+                value={form.lname}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    lname: e.target.value,
+                  })
+                }
                 placeholder="Doe"
               />
             </div>
@@ -164,8 +242,13 @@ function BookingForm() {
                 name="email"
                 id="email"
                 className="input-box"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                value={form.email}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    email: e.target.value,
+                  })
+                }
                 placeholder="johndoe@exmail.com"
               />
             </div>
@@ -177,25 +260,22 @@ function BookingForm() {
                 name="phone-number"
                 id="phone-number"
                 className="input-box"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
+                value={form.phone}
+                onChange={(e) =>
+                  setForm({
+                    ...form,
+                    phone: e.target.value,
+                  })
+                }
                 placeholder="08012345678"
               />
             </div>
           </div>
         </fieldset>
 
-        <button
-          type="submit"
-          className="LL-btn form-btn"
-          value="Confirm Reservation"
-        >
-          <a href="" className="a-tag">
-            CONFIRM RESERVATION
-          </a>
+        <button type="submit" className="form-btn" >
+          CONFIRM RESERVATION
         </button>
-        {/* should this be a submit input tag or a  button?
-  What am I doing wrong??*/}
       </form>
     </section>
   );

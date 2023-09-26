@@ -31,7 +31,7 @@ ul li {
 button .a-tag,
 li .a-tag,
 .Order-link,
-.seat-choice {
+.seat-choice, .form-btn {
   text-decoration: none;
   font-family: "Karla", sans-serif;
   font-size: 18px;
@@ -650,16 +650,18 @@ textarea{
   padding: 0.7rem 1rem;
 }
 .form-btn {
-  width: 50%;
+  width: 45%;
   max-width: 100%;
   margin: auto;
+  padding: 2.5vh 1vw;
   text-align: center;
-  /* background-color: #f80539; */
-}
-.form-btn .a-tag {
-  /* color: #ffffff; */
-  font-size: 20px;
+  background-color: #f4ce14;
+  border: none;
+  border-radius: 16px;
   font-weight: 800;
+  font-size: 20px;
+  cursor: pointer;
+  /* background-color: #f80539; */
 }
 
 /* Media Queries */

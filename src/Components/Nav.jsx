@@ -22,12 +22,12 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/about" className="a-tag N-a">
+          <Link to="#/about" className="a-tag N-a">
             About
           </Link>
         </li>
         <li>
-          <Link to="/menu" className="a-tag N-a">
+          <Link to="#/menu" className="a-tag N-a">
             Menu
           </Link>
         </li>
@@ -37,12 +37,12 @@ export default function Nav() {
           </Link>
         </li>
         <li>
-          <Link to="/order-online" className="a-tag N-a">
+          <Link to="#/order-online" className="a-tag N-a">
             Order Online
           </Link>
         </li>
         <li>
-          <Link to="/login" className="a-tag N-a">
+          <Link to="#/login" className="a-tag N-a">
             Login
           </Link>
         </li>
