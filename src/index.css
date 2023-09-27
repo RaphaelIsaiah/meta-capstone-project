@@ -344,7 +344,7 @@ main {
 }
 .Review-display {
   /* background-color: rgb(20, 24, 27); */
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
@@ -795,4 +795,15 @@ textarea{
     width: 90%;
     max-width: 100%;
   }
+  /* ---- Footer ----- */
+  .Footer-closure{
+    flex-flow: column;
+  }
+.fnav-container{
+  width: 100%;
+  /* justify-content: space-around; */
+}
+.fnav{
+  margin: 0 auto;
+ }
 }
