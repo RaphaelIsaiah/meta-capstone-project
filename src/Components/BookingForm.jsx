@@ -5,8 +5,8 @@ import restaurant from "../Assets/Images/restaurant.png";
 function BookingForm() {
   const [form, setForm] = useState({
     // seating: "",
-    indoor: { checked: false },
-    outdoor: { checked: false },
+    indoor: false,
+    outdoor: false,
     fname: "",
     lname: "",
     phone: "",
@@ -42,8 +42,8 @@ function BookingForm() {
     setForm({
       ...form,
       // seating: "",
-      indoor: { checked: false },
-      outdoor: { checked: false },
+      indoor: false,
+      outdoor: false,
       fname: "",
       lname: "",
       phone: "",
@@ -76,14 +76,15 @@ function BookingForm() {
                 type="radio"
                 id="indoor"
                 name="seating"
-                value={form.indoor}
+                checked={form.indoor}
                 // onChange={handleChange}
                 onChange={(e) =>
                   setForm({
                     ...form,
-                    indoor: e.target.value,
+                    indoor: e.target.checked,
                   })
                 }
+                // I think I have solved the state and resetting problem of the radio buttons.
               />
               <label htmlFor="indoor" className="seat-choice">
                 Indoor Seating
@@ -94,12 +95,12 @@ function BookingForm() {
                 type="radio"
                 id="outdoor"
                 name="seating"
-                value={form.outdoor}
+                checked={form.outdoor}
                 // onChange={handleChange}
                 onChange={(e) =>
                   setForm({
                     ...form,
-                    outdoor: e.target.value,
+                    outdoor: e.target.checked,
                   })
                 }
               />
