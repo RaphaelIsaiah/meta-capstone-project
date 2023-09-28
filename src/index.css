@@ -345,6 +345,7 @@ main {
 .Review-display {
   /* background-color: rgb(20, 24, 27); */
   width: 80%;
+  /* max-width: 100%; */
   display: flex;
   justify-content: space-between;
   flex-flow: row wrap;
@@ -366,6 +367,7 @@ main {
   display: flex;
   flex-direction: column;
   padding-top: 5px;
+  /* background-color: cadetblue; */
 }
 .username,
 .name,
@@ -500,7 +502,7 @@ footer {
   flex-flow: row wrap;
   justify-content: space-between;
   /* background-color: aquamarine; */
-  padding: 2rem;
+  padding: 1rem;
   height: auto;
 }
 .fnav {
@@ -511,7 +513,7 @@ footer {
   text-align: left;
   justify-content: left;
   place-items: left;
-  margin: 1vh;
+  margin: 1vh auto;
 }
 .fnav p {
   font-family: "Karla", sans-serif;
@@ -798,12 +800,18 @@ textarea{
   /* ---- Footer ----- */
   .Footer-closure{
     flex-flow: column;
+    width: 100%;
+  }
+  .footer-logo{
+    max-width: 30%;
+    min-width: 30%;
   }
 .fnav-container{
   width: 100%;
-  /* justify-content: space-around; */
+  justify-content: space-between;
+  padding: 0;
 }
 .fnav{
-  margin: 0 auto;
+  margin: 1vh auto;
  }
 }

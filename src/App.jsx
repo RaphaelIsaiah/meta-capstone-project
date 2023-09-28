@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./Pages/HomePage";
-import Reservation from "./Pages/ReservationPage";
+import BookingPage from "./Pages/BookingPage";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
     <div className="App-container">
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/reservations" element={<Reservation />} />
+        <Route path="/reservations" element={<BookingPage />} />
       </Routes>
     </div>
   );

@@ -70,3 +70,59 @@
         </select>
         <input type="submit" value="Make Your reservation" />
       </form>
+
+                      {/* <option
+                  value={availableTimess[0]}
+                  onChange={(e) =>
+                    setAvailableTimess({
+                      ...availableTimess,
+                      option1: e.target.value,
+                    })
+                  }
+                >
+                  {availableTimess[0]}
+                </option>
+                <option
+                  value={availableTimes.option2}
+                  onchange={(e) =>
+                    setAvailableTimes({
+                      ...availableTimes,
+                      option2: e.target.value,
+                    })
+                  }
+                >
+                  {availableTimes.option2}
+                </option>
+                <option
+                  value={availableTimes.option3}
+                  onChange={(e) =>
+                    setAvailableTimes({
+                      ...availableTimes,
+                      option3: e.target.value,
+                    })
+                  }
+                >
+                  {availableTimes.option3}
+                </option>
+                <option
+                  value={availableTimes.option4}
+                  onChange={(e) =>
+                    setAvailableTimes({
+                      ...availableTimes,
+                      option4: e.target.value,
+                    })
+                  }
+                >
+                  {availableTimes.option4}
+                </option>
+                <option
+                  value={availableTimes.option5}
+                  onChange={(e) =>
+                    setAvailableTimes({
+                      ...availableTimes,
+                      option5: e.target.value,
+                    })
+                  }
+                >
+                  {availableTimes.option5}
+                </option> */}

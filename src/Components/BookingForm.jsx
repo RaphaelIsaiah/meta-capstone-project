@@ -128,7 +128,6 @@ function BookingForm() {
                 //     date: e.target.value,
                 //   })
                 // }
-                // onChange={(e) => setDate(e.target.value)}
               />
             </div>
             <div className="time col">
@@ -136,19 +135,18 @@ function BookingForm() {
               <select
                 id="time"
                 className="input-box"
-                // value={time}
-                // value={availableTimes[3]}
+                // value={availableTimes[2]}
                 // onChange={(e) =>
                 //   setAvailableTimes({
                 //     ...availableTimes,
-                //     3: e.target.value,
+                //     : e.target.value,
                 //   })
                 // }
-                // onChange={(e) => setTime(e.target.value)}
               >
                 {availableTimes.map((opt) => (
                   <option
                     value={opt}
+                    key={opt}
                     onChange={(e) =>
                       setAvailableTimes({
                         ...availableTimes,
@@ -159,63 +157,6 @@ function BookingForm() {
                     {opt}
                   </option>
                 ))}
-                {/* I think that map() should be used here. I'll check more on it. */}
-                {/* <option
-                  value={availableTimess[0]}
-                  onChange={(e) =>
-                    setAvailableTimess({
-                      ...availableTimess,
-                      option1: e.target.value,
-                    })
-                  }
-                >
-                  {availableTimess[0]}
-                </option>
-                <option
-                  value={availableTimes.option2}
-                  onchange={(e) =>
-                    setAvailableTimes({
-                      ...availableTimes,
-                      option2: e.target.value,
-                    })
-                  }
-                >
-                  {availableTimes.option2}
-                </option>
-                <option
-                  value={availableTimes.option3}
-                  onChange={(e) =>
-                    setAvailableTimes({
-                      ...availableTimes,
-                      option3: e.target.value,
-                    })
-                  }
-                >
-                  {availableTimes.option3}
-                </option>
-                <option
-                  value={availableTimes.option4}
-                  onChange={(e) =>
-                    setAvailableTimes({
-                      ...availableTimes,
-                      option4: e.target.value,
-                    })
-                  }
-                >
-                  {availableTimes.option4}
-                </option>
-                <option
-                  value={availableTimes.option5}
-                  onChange={(e) =>
-                    setAvailableTimes({
-                      ...availableTimes,
-                      option5: e.target.value,
-                    })
-                  }
-                >
-                  {availableTimes.option5}
-                </option> */}
-                {/* <option></option> */}
               </select>
             </div>
           </div>

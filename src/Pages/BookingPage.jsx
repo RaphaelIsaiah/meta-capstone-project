@@ -5,7 +5,7 @@ import Footer from "../Components/Footer";
 import BookingForm from "../Components/BookingForm";
 import Testimonials from "../Components/Testimonials";
 
-function Reservation() {
+function BookingPage() {
   return (
     <div className="homepage">
       <Header />
@@ -19,4 +19,4 @@ function Reservation() {
   );
 }
 
-export default Reservation;
+export default BookingPage;
