@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import { useState } from "react";
 import restaurant from "../Assets/Images/restaurant.png";
 
-function BookingForm() {
+function BookingForm(props) {
   const [form, setForm] = useState({
     // seating: "",
     indoor: false,
@@ -25,13 +25,13 @@ function BookingForm() {
   //   option4: "21:00",
   //   option5: "22:00",
   // });
-  const [availableTimes, setAvailableTimes] = useState([
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-  ])
+  // const [availableTimes, setAvailableTimes] = useState([
+  //   "18:00",
+  //   "19:00",
+  //   "20:00",
+  //   "21:00",
+  //   "22:00",
+  // ])
 
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -54,9 +54,8 @@ function BookingForm() {
       time: "",
       comment: "",
     });
-    // How do I reset this form.
+  //  props.setTimes(prevTime => [...prevTime,])
     // How can I set the date to read current date.
-    // The radio buttons are not resetting...
   };
   return (
     <section className="form-section">
@@ -85,6 +84,7 @@ function BookingForm() {
                   })
                 }
                 // I think I have solved the state and resetting problem of the radio buttons.
+                // But is there a way to check if this is correct?
               />
               <label htmlFor="indoor" className="seat-choice">
                 Indoor Seating
@@ -136,21 +136,21 @@ function BookingForm() {
               <select
                 id="time"
                 className="input-box"
-                // value={availableTimes[2]}
-                // onChange={(e) =>
-                //   setAvailableTimes({
-                //     ...availableTimes,
-                //     : e.target.value,
-                //   })
-                // }
+                value={props.time[1]}
+                onChange={(e) =>
+                  props.setTimes({
+                    ...props.time,
+                    [e.target.time]: e.target.value
+                  })
+                }
               >
-                {availableTimes.map((opt) => (
+                {props.time.map((opt) => (
                   <option
                     value={opt}
                     key={opt}
                     onChange={(e) =>
-                      setAvailableTimes({
-                        ...availableTimes,
+                      props.setTimes({
+                        ...props.time,
                         opt: e.target.value,
                       })
                     }
