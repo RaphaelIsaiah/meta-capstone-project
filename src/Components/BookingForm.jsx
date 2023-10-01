@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import { useState } from "react";
 import restaurant from "../Assets/Images/restaurant.png";
 
-function BookingForm(props) {
+function BookingForm({state, dispatch}) {
   const [form, setForm] = useState({
     // seating: "",
     indoor: false,
@@ -136,21 +136,21 @@ function BookingForm(props) {
               <select
                 id="time"
                 className="input-box"
-                value={props.time[1]}
-                onChange={(e) =>
-                  props.setTimes({
-                    ...props.time,
-                    [e.target.time]: e.target.value
-                  })
-                }
+                // value={props.time[1]}
+                // onChange={(e) =>
+                //   props.setTimes({
+                //     ...props.time,
+                //     [e.target.value]: e.target.value
+                //   })
+                // }
               >
-                {props.time.map((opt) => (
+                {state.map((opt) => (
                   <option
                     value={opt}
                     key={opt}
                     onChange={(e) =>
-                      props.setTimes({
-                        ...props.time,
+                      dispatch({
+                        ...state,
                         opt: e.target.value,
                       })
                     }
