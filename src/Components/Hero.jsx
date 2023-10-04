@@ -13,13 +13,15 @@ function Hero() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <Link to="/reservations" className="btn-hold">
+          <div className="btn-hold">
+            <Link to="/reservations">
             <button className="LL-btn table">
               <a href="#" className="a-tag">
                 Reserve a Table
               </a>
             </button>
-          </Link>
+            </Link>
+          </div>
         </div>
         <div className="Hero-img">
           <img

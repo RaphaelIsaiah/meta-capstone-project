@@ -713,6 +713,7 @@ textarea{
     max-height: 60%;
     width: 450px;
     max-width: 100%;
+    border-radius: 16px;
   }
   /* ---Main-Specials section--- */
   .Main-specials{
