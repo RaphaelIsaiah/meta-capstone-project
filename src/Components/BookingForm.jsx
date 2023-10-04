@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import restaurant from "../Assets/Images/restaurant.png";
 
 function BookingForm({state, dispatch}) {
+  const occasions = ['Birthday', 'Anniversary', 'Wedding', 'Other'];
+  const [occasion, setOccasion] = useState(occasions[1]);
   const [form, setForm] = useState({
     // seating: "",
     indoor: false,
@@ -11,9 +13,9 @@ function BookingForm({state, dispatch}) {
     lname: "",
     phone: "",
     email: "",
-    date: new Date(),
+    date: new Date().toISOString().split('T')[0],
     diners: "4",
-    occasion: "Anniversary",
+    // occasion: occasion[2],
     time: "",
     comment: "",
   });
@@ -48,7 +50,7 @@ function BookingForm({state, dispatch}) {
       lname: "",
       phone: "",
       email: "",
-      date: "",
+      date: new Date().toISOString().split('T')[0],
       diners: "4",
       occasion: "Anniversary",
       time: "",
@@ -117,9 +119,8 @@ function BookingForm({state, dispatch}) {
                 type="date"
                 name="date"
                 id="date"
-                min="2023-09-25"
-                // How do I set a proper min and max?
-                max="2024-12-31"
+                min={form.date}
+                // How do I set a proper min and max?--solved
                 className="input-box"
                 value={form.date}
                 onChange={handleChange}
@@ -165,7 +166,21 @@ function BookingForm({state, dispatch}) {
           <div className="row -three">
             <div className="occasion col">
               <label htmlFor="occasion">OCCASION</label>
-              <select
+              <select 
+              className="input-box"
+          id="booking-occasion" 
+          name="occasion" 
+          value={occasion} 
+          required={true} 
+          onChange={e => setOccasion(e.target.value)}
+        >
+          {occasions.map(occasion => 
+            <option data-testid="booking-occasion-option" key={occasion}>
+              {occasion}
+            </option>
+          )}
+        </select>
+              {/* <select
                 name="occasion"
                 id="occasion"
                 className="input-box"
@@ -182,7 +197,7 @@ function BookingForm({state, dispatch}) {
                 <option value="Anniversary">Anniversary</option>
                 <option value="Wedding">Wedding</option>
                 <option value="Other">Other</option>
-              </select>
+              </select> */}
             </div>
             <div className="diners col">
               <label htmlFor="diners">NUMBER OF DINERS</label>
