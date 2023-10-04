@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import hero from "../Assets/Images/heroImage.png";
 
 function Hero() {
@@ -12,13 +13,13 @@ function Hero() {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </p>
-          <div className="btn-hold">
+          <Link to="/reservations" className="btn-hold">
             <button className="LL-btn table">
               <a href="#" className="a-tag">
                 Reserve a Table
               </a>
             </button>
-          </div>
+          </Link>
         </div>
         <div className="Hero-img">
           <img

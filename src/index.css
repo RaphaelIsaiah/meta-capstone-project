@@ -214,6 +214,7 @@ main {
   max-width: 314px;
   height: auto;
   margin: auto;
+  object-fit: cover;
 }
 /* --------Specials section------- */
 /* Write a media query for Specials section to change to column and fill the container */
@@ -714,6 +715,9 @@ textarea{
     max-width: 100%;
   }
   /* ---Main-Specials section--- */
+  .Main-specials{
+    width: 100%;
+  }
   .Meal-display {
     display: grid;
     gap: 20px;
@@ -723,7 +727,7 @@ textarea{
   }
   .Meal-card {
     width: 90%;
-    max-width: 600px;
+    max-width: 100%;
     /* height: fit-content; */
   }
   .Meal-img {
