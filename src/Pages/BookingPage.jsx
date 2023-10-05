@@ -6,38 +6,27 @@ import BookingForm from "../Components/BookingForm";
 import Testimonials from "../Components/Testimonials";
 // import userEvent from "@testing-library/user-event";
 
-const times = ["18:00", "19:00", "20:00", "21:00", "22:00"];
-const reducer = (state, action) => {
-  // if (action.type === "times") return { times };
-  // return state;
-  switch (action.type) {
-    case "times":
-      return { ...state, times };
-    default:
-      throw new Error();
-  }
-};
+
 
 function BookingPage() {
-  const initialState = times;
+  function reducer(state, action) {
+    switch (action.type) {
+      case "update_times":
+        return updateTimes(action.payload);
+      default:
+        return state;
+    }
+  }
 
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const updateTimes = (e) => {
-    dispatch({ type: "times" });
+  const initializeTimes = () => {
+    return ["17:00", "17:30", "18:00", "19:00", "20:00", "21:00"];
   };
 
-  const initializeTimes = (e) => {
-    initialState = times;
+  const updateTimes = (date) => {
+    return ["17:00", "17:30", "18:00", "19:00", "20:00", "21:00"];
   };
 
-  // const [availableTimes, setAvailableTimes] = useState([
-  //   "18:00",
-  //   "19:00",
-  //   "20:00",
-  //   "21:00",
-  //   "22:00",
-  // ]);
+  const [state, dispatch] = useReducer(reducer, initializeTimes());
 
   return (
     <div className="homepage">

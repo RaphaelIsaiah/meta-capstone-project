@@ -1,40 +1,29 @@
 import React, { useState } from "react";
-// import { useState } from "react";
 import restaurant from "../Assets/Images/restaurant.png";
 
-function BookingForm({state, dispatch}) {
-  const occasions = ['Birthday', 'Anniversary', 'Wedding', 'Other'];
-  const [occasion, setOccasion] = useState(occasions[1]);
+function BookingForm({ state, dispatch }) {
+  const occasions = ["Birthday", "Anniversary", "Wedding", "Other"];
   const [form, setForm] = useState({
-    // seating: "",
     indoor: false,
     outdoor: false,
     fname: "",
     lname: "",
     phone: "",
     email: "",
-    date: new Date().toISOString().split('T')[0],
+    date: new Date().toISOString().split("T")[0],
     diners: "4",
-    // occasion: occasion[2],
-    time: "",
+    time: "17:00",
     comment: "",
   });
 
-  // const [availableTimes, setAvailableTimes] = useState({
-  //   option1: "18:00",
-  //   option2: "19:00",
-  //   option3: "20:00",
-  //   option4: "21:00",
-  //   option5: "22:00",
-  // });
-  // const [availableTimes, setAvailableTimes] = useState([
-  //   "18:00",
-  //   "19:00",
-  //   "20:00",
-  //   "21:00",
-  //   "22:00",
-  // ])
-
+  const handleDateChange = (event) => {
+    const { name, value } = event.target;
+    setForm((prevForm) => ({
+      ...prevForm,
+      [name]: value,
+    }));
+    dispatch({ type: "update_times", payload: value });
+  };
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -43,21 +32,18 @@ function BookingForm({state, dispatch}) {
     e.preventDefault();
     setForm({
       ...form,
-      // seating: "",
       indoor: false,
       outdoor: false,
       fname: "",
       lname: "",
       phone: "",
       email: "",
-      date: new Date().toISOString().split('T')[0],
+      date: new Date().toISOString().split("T")[0],
       diners: "4",
       occasion: "Anniversary",
-      time: "",
+      time: "17:00",
       comment: "",
     });
-  //  props.setTimes(prevTime => [...prevTime,])
-    // How can I set the date to read current date.
   };
   return (
     <section className="form-section">
@@ -78,7 +64,6 @@ function BookingForm({state, dispatch}) {
                 id="indoor"
                 name="seating"
                 checked={form.indoor}
-                // onChange={handleChange}
                 onChange={(e) =>
                   setForm({
                     ...form,
@@ -98,7 +83,6 @@ function BookingForm({state, dispatch}) {
                 id="outdoor"
                 name="seating"
                 checked={form.outdoor}
-                // onChange={handleChange}
                 onChange={(e) =>
                   setForm({
                     ...form,
@@ -120,16 +104,9 @@ function BookingForm({state, dispatch}) {
                 name="date"
                 id="date"
                 min={form.date}
-                // How do I set a proper min and max?--solved
                 className="input-box"
                 value={form.date}
-                onChange={handleChange}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     date: e.target.value,
-                //   })
-                // }
+                onChange={handleDateChange}
               />
             </div>
             <div className="time col">
@@ -137,27 +114,12 @@ function BookingForm({state, dispatch}) {
               <select
                 id="time"
                 className="input-box"
-                // value={props.time[1]}
-                // onChange={(e) =>
-                //   props.setTimes({
-                //     ...props.time,
-                //     [e.target.value]: e.target.value
-                //   })
-                // }
+                name="time"
+                value={form.time}
+                onChange={handleChange}
               >
                 {state.map((opt) => (
-                  <option
-                    value={opt}
-                    key={opt}
-                    onChange={(e) =>
-                      dispatch({
-                        ...state,
-                        opt: e.target.value,
-                      })
-                    }
-                  >
-                    {opt}
-                  </option>
+                  <option key={opt}>{opt}</option>
                 ))}
               </select>
             </div>
@@ -166,38 +128,19 @@ function BookingForm({state, dispatch}) {
           <div className="row -three">
             <div className="occasion col">
               <label htmlFor="occasion">OCCASION</label>
-              <select 
-              className="input-box"
-          id="booking-occasion" 
-          name="occasion" 
-          value={occasion} 
-          required={true} 
-          onChange={e => setOccasion(e.target.value)}
-        >
-          {occasions.map(occasion => 
-            <option data-testid="booking-occasion-option" key={occasion}>
-              {occasion}
-            </option>
-          )}
-        </select>
-              {/* <select
-                name="occasion"
-                id="occasion"
+              <select
                 className="input-box"
+                id="booking-occasion"
+                name="occasion"
                 value={form.occasion}
                 onChange={handleChange}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     occasion: e.target.value,
-                //   })
-                // }
               >
-                <option value="Birthday">Birthday</option>
-                <option value="Anniversary">Anniversary</option>
-                <option value="Wedding">Wedding</option>
-                <option value="Other">Other</option>
-              </select> */}
+                {occasions.map((occasion) => (
+                  <option data-testid="booking-occasion-option" key={occasion}>
+                    {occasion}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="diners col">
               <label htmlFor="diners">NUMBER OF DINERS</label>
@@ -210,12 +153,6 @@ function BookingForm({state, dispatch}) {
                 value={form.diners}
                 name="diners"
                 onChange={handleChange}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     diners: e.target.value,
-                //   })
-                // }
               />
             </div>
             <div className="comment col">
@@ -225,12 +162,6 @@ function BookingForm({state, dispatch}) {
                 id="comments"
                 cols="50"
                 value={form.comment}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     comment: e.target.value,
-                //   })
-                // }
                 onChange={handleChange}
                 rows="5"
                 placeholder=". . ."
@@ -238,8 +169,11 @@ function BookingForm({state, dispatch}) {
             </div>
           </div>
         </fieldset>
+
+        {/* ----Confirmation Details---- */}
+
         <h3 className="confirmation-heading">CONFIRMATION DETAILS</h3>
-        {/* Confirmation Details */}
+
         <fieldset className="field-two">
           <div className="row">
             <div className="col">
@@ -250,12 +184,6 @@ function BookingForm({state, dispatch}) {
                 id="fname"
                 className="input-box"
                 value={form.fname}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     fname: e.target.value,
-                //   })
-                // }
                 onChange={handleChange}
                 placeholder="John"
               />
@@ -270,12 +198,6 @@ function BookingForm({state, dispatch}) {
                 className="input-box"
                 value={form.lname}
                 onChange={handleChange}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     lname: e.target.value,
-                //   })
-                // }
                 placeholder="Doe"
               />
             </div>
@@ -291,12 +213,6 @@ function BookingForm({state, dispatch}) {
                 className="input-box"
                 value={form.email}
                 onChange={handleChange}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     email: e.target.value,
-                //   })
-                // }
                 placeholder="johndoe@exmail.com"
               />
             </div>
@@ -310,12 +226,6 @@ function BookingForm({state, dispatch}) {
                 className="input-box"
                 value={form.phone}
                 onChange={handleChange}
-                // onChange={(e) =>
-                //   setForm({
-                //     ...form,
-                //     phone: e.target.value,
-                //   })
-                // }
                 placeholder="08012345678"
               />
             </div>
