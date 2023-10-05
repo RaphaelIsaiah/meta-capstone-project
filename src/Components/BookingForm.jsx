@@ -16,6 +16,7 @@ function BookingForm({ state, dispatch }) {
     comment: "",
   });
 
+  // Update the BookingForm component to dispatch the state change when the date form field is changed.
   const handleDateChange = (event) => {
     const { name, value } = event.target;
     setForm((prevForm) => ({
@@ -24,6 +25,7 @@ function BookingForm({ state, dispatch }) {
     }));
     dispatch({ type: "update_times", payload: value });
   };
+  
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
