@@ -4,7 +4,7 @@ import restaurant from "../Assets/Images/restaurant.png";
 function BookingForm({ state, dispatch }) {
   const occasions = ["Birthday", "Anniversary", "Wedding", "Other"];
   const [form, setForm] = useState({
-    indoor: false,
+    indoor: true,
     outdoor: false,
     fname: "",
     lname: "",
@@ -34,7 +34,7 @@ function BookingForm({ state, dispatch }) {
     e.preventDefault();
     setForm({
       ...form,
-      indoor: false,
+      indoor: true,
       outdoor: false,
       fname: "",
       lname: "",
