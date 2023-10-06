@@ -12,8 +12,8 @@ function ConfirmedBooking() {
       <main className="Main-container">
         <p>Booking Confirmed!!!</p>
         <p>See you soon</p>
+        <Testimonials />
       </main>
-      <Testimonials />
       <Footer />
     </div>
   );

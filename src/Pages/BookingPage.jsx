@@ -5,6 +5,7 @@ import Footer from "../Components/Footer";
 import BookingForm from "../Components/BookingForm";
 import Testimonials from "../Components/Testimonials";
 import { fetchAPI, submitAPI } from "../api";
+import { useNavigate } from "react-router-dom";
 // import userEvent from "@testing-library/user-event";
 
 function BookingPage() {
@@ -37,8 +38,13 @@ function BookingPage() {
     // return ["17:00", "17:30", "18:00", "19:00", "20:00", "21:00"];
   };
 
-  function submitForm(formData){
-    const submitted = submitAPI(formData)
+  const navigate = useNavigate();
+  function submitForm(formData) {
+    const submitted = submitAPI(formData);
+
+    if (submitted) {
+      navigate("/confirmed");
+    }
   }
 
   // using the useReducer function and provide the two previous functions as parameters.
@@ -51,7 +57,11 @@ function BookingPage() {
       <Header />
       <Nav />
       <main className="Main-container">
-        <BookingForm state={state} dispatch={dispatch} />
+        <BookingForm
+          state={state}
+          dispatch={dispatch}
+          submitForm={submitForm}
+        />
         <Testimonials />
       </main>
       <Footer />

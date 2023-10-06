@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import restaurant from "../Assets/Images/restaurant.png";
 
-function BookingForm({ state, dispatch }) {
+function BookingForm({ state, dispatch, submitForm }) {
   const occasions = ["Birthday", "Anniversary", "Wedding", "Other"];
   const [form, setForm] = useState({
     indoor: true,
@@ -12,7 +12,7 @@ function BookingForm({ state, dispatch }) {
     email: "",
     date: new Date().toISOString().split("T")[0],
     diners: "4",
-    occasion: 'Anniversary',
+    occasion: "Anniversary",
     time: "17:00",
     comment: "",
   });
@@ -33,6 +33,7 @@ function BookingForm({ state, dispatch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    submitForm(form);
     setForm({
       ...form,
       indoor: true,
@@ -47,7 +48,7 @@ function BookingForm({ state, dispatch }) {
       time: "17:00",
       comment: "",
     });
-    console.log('Form Submitted!')
+    console.log("Form Submitted!");
   };
   return (
     <section className="form-section">
