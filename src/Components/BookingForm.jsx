@@ -12,6 +12,7 @@ function BookingForm({ state, dispatch }) {
     email: "",
     date: new Date().toISOString().split("T")[0],
     diners: "4",
+    occasion: 'Anniversary',
     time: "17:00",
     comment: "",
   });
@@ -25,7 +26,7 @@ function BookingForm({ state, dispatch }) {
     }));
     dispatch({ type: "update_times", payload: value });
   };
-  
+
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -46,6 +47,7 @@ function BookingForm({ state, dispatch }) {
       time: "17:00",
       comment: "",
     });
+    console.log('Form Submitted!')
   };
   return (
     <section className="form-section">
