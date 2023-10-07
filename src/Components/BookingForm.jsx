@@ -79,6 +79,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                   })
                 }
                 required
+                aria-label="Indoor Seating"
+                aria-required="true"
                 // I think I have solved the state and resetting problem of the radio buttons.
                 // But is there a way to check if this is correct?
               />
@@ -99,6 +101,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                   })
                 }
                 required
+                aria-label="Outdoor Seating"
+                aria-required="true"
               />
               <label htmlFor="outdoor" className="seat-choice">
                 Outdoor Seating
@@ -118,6 +122,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.date}
                 onChange={handleDateChange}
                 required
+                aria-label="Choose a Date"
+                aria-required="true"
               />
             </div>
             <div className="time col">
@@ -129,6 +135,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.time}
                 onChange={handleChange}
                 required
+                aria-label="Choose a Time"
+                aria-required="true"
               >
                 {state.map((opt) => (
                   <option key={opt}>{opt}</option>
@@ -147,6 +155,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.occasion}
                 onChange={handleChange}
                 required
+                aria-label="Choose an Occasion"
+                aria-required="true"
               >
                 {occasions.map((occasion) => (
                   <option data-testid="booking-occasion-option" key={occasion}>
@@ -167,6 +177,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                 name="diners"
                 onChange={handleChange}
                 required
+                aria-label="Number of Diners"
+                aria-required="true"
               />
             </div>
             <div className="comment col">
@@ -179,6 +191,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 onChange={handleChange}
                 rows="5"
                 placeholder=". . ."
+                aria-label="Additional Comments"
               ></textarea>
             </div>
           </div>
@@ -203,6 +216,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                 required
                 pattern="[a-z]{2-15}"
                 title="Please input a name"
+                aria-label="First Name"
+                aria-required="true"
               />
             </div>
 
@@ -217,8 +232,10 @@ function BookingForm({ state, dispatch, submitForm }) {
                 onChange={handleChange}
                 placeholder="Doe"
                 required
-                pattern="[a-z]{3-15}"
+                pattern="[a-z]{2-15}"
                 title="Please input a name"
+                aria-label="Last Name"
+                aria-required="true"
               />
             </div>
           </div>
@@ -235,6 +252,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                 onChange={handleChange}
                 placeholder="johndoe@exmail.com"
                 required
+                aria-label="Email"
+                aria-required="true"
               />
             </div>
 
@@ -252,6 +271,8 @@ function BookingForm({ state, dispatch, submitForm }) {
                 pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
                 title="Phone number should be eleven digits"
                 maxLength={11}
+                aria-label="Phone number"
+                aria-required="true"
               />
             </div>
           </div>
@@ -262,6 +283,7 @@ function BookingForm({ state, dispatch, submitForm }) {
           className="form-btn"
           disabled={!isFormValid()}
           onSubmit={handleSubmit}
+          aria-label="Confirm Reservation"
         >
           CONFIRM RESERVATION
         </button>

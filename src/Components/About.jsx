@@ -8,8 +8,8 @@ function About() {
       {/* test may delete this... */}
       <div className="About-closure">
         <div className="About-text">
-          <p className="A-ll">Little Lemon</p>
-          <p className="A-ch">Chicago</p>
+          <h1 className="A-ll">Little Lemon</h1>
+          <h2 className="A-ch">Chicago</h2>
           <p className="A-txt">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
             unde placeat pariatur quae doloremque iste accusamus odio ipsam

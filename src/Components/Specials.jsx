@@ -21,8 +21,8 @@ function Specials() {
           <div className="Meal-card">
             <img src={greekSalad} alt="Greek Salad" className="Meal-img" />
             <div className="meal-n-price Greek">
-              <p className="food-name">Greek Salad</p>
-              <p className="food-price">$12.99</p>
+              <h3 className="food-name">Greek Salad</h3>
+              <h5 className="food-price">$12.99</h5>
             </div>
             <span className="Card-text">
               <p>
@@ -41,8 +41,8 @@ function Specials() {
           <div className="Meal-card">
             <img src={bruschetta} alt="Bruschetta" className="Meal-img" />
             <div className="meal-n-price">
-              <p className="food-name">Bruschetta</p>
-              <p className="food-price">$5.99</p>
+              <h3 className="food-name">Bruschetta</h3>
+              <h5 className="food-price">$5.99</h5>
             </div>
             <span className="Card-text">
               <p>
@@ -60,8 +60,8 @@ function Specials() {
           <div className="Meal-card">
             <img src={lemonDessert} alt="Lemon Dessert" className="Meal-img" />
             <div className="meal-n-price">
-              <p className="food-name">Lemon Dessert</p>
-              <p className="food-price">$5.00</p>
+              <h3 className="food-name">Lemon Dessert</h3>
+              <h5 className="food-price">$5.00</h5>
             </div>
             <span className="Card-text">
               <p>

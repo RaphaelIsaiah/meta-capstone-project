@@ -418,7 +418,7 @@ main {
   max-width: 40%;
   /* background-color: #928c6f; */
 }
-.About-text p {
+.About-text p, .A-ll, .A-ch {
   text-align: left;
 }
 .About-images {

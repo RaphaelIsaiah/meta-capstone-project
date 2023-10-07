@@ -7,8 +7,8 @@ function Hero() {
     <section className="Main-hero">
       <div className="Hero-closure">
         <div className="H-txt-btn">
-          <p className="Hero-ll">Little Lemon</p>
-          <p className="Hero-ch">Chicago</p>
+          <h1 className="Hero-ll">Little Lemon</h1>
+          <h2 className="Hero-ch">Chicago</h2>
           <p className="Hero-des">
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.

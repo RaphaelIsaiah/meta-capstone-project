@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
         <section className="fnav-container">
           <div className="fnav">
-            <p>Doormat Navigation</p>
+            <h3>Doormat Navigation</h3>
             <ul className="f-links">
               <li>
                 <a href="#" className="a-tag">
@@ -46,7 +46,7 @@ export default function Footer() {
           </div>
 
           <div className="fnav">
-            <p>Contact</p>
+            <h3>Contact</h3>
             <ul className="f-links">
               <li>
                 <a href="#" className="a-tag">
@@ -67,7 +67,7 @@ export default function Footer() {
           </div>
 
           <div className="fnav">
-            <p>Social Media Links</p>
+            <h3>Social Media Links</h3>
             <ul className="f-links">
               <li>
                 <a href="#" className="a-tag">
