@@ -215,7 +215,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 placeholder="John"
                 required
                 pattern="[a-z]{2-15}"
-                title="Please input a name"
+                title="Please input a name."
                 aria-label="First Name"
                 aria-required="true"
               />
@@ -252,6 +252,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 onChange={handleChange}
                 placeholder="johndoe@exmail.com"
                 required
+                title="Please input an email with this format name@exmail.com"
                 aria-label="Email"
                 aria-required="true"
               />
@@ -269,7 +270,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 placeholder="08012345678"
                 required
                 pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
-                title="Phone number should be eleven digits"
+                title="Phone number should be eleven digits e.g 08012345678 "
                 maxLength={11}
                 aria-label="Phone number"
                 aria-required="true"
