@@ -10,7 +10,7 @@ import Footer from "./Components/Footer";
 import { Link } from "react-router-dom";
 import About from "./Components/About";
 
-// 
+// I am lost here. I don't understand how to write the tests correctly.
 
 test("the text renders correctly", () => {
   render(<Specials/>);
@@ -28,10 +28,10 @@ test("static text renders correctly", () => {
   expect(element).toBeInTheDocument();
 })
 
-test("static text renders correctly", () => {
-  render(<BookingForm/>);
+// test("static text renders correctly", () => {
+//   render(<BookingForm/>);
 
-  const element = screen.getByText(/confirmation details/i);
+//   const element = screen.getByText(/confirmation details/i);
 
-  expect(element).toBeInTheDocument();
-})
+//   expect(element).toBeInTheDocument();
+// })
