@@ -100,9 +100,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                     outdoor: e.target.checked,
                   })
                 }
-                required
                 aria-label="Outdoor Seating"
-                aria-required="true"
               />
               <label htmlFor="outdoor" className="seat-choice">
                 Outdoor Seating
@@ -209,12 +207,12 @@ function BookingForm({ state, dispatch, submitForm }) {
                 type="text"
                 name="fname"
                 id="fname"
-                className="input-box"
+                className="input-box confirm"
                 value={form.fname}
                 onChange={handleChange}
                 placeholder="John"
                 required
-                pattern="[a-z]{2-15}"
+                pattern="[a-zA-z]{2,15}"
                 title="Please input a name."
                 aria-label="First Name"
                 aria-required="true"
@@ -227,12 +225,12 @@ function BookingForm({ state, dispatch, submitForm }) {
                 type="text"
                 name="lname"
                 id="lname"
-                className="input-box"
+                className="input-box confirm"
                 value={form.lname}
                 onChange={handleChange}
                 placeholder="Doe"
                 required
-                pattern="[a-z]{2-15}"
+                pattern="[a-zA-z]{2,15}"
                 title="Please input a name"
                 aria-label="Last Name"
                 aria-required="true"
@@ -247,7 +245,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 type="email"
                 name="email"
                 id="email"
-                className="input-box"
+                className="input-box confirm"
                 value={form.email}
                 onChange={handleChange}
                 placeholder="johndoe@exmail.com"
@@ -264,7 +262,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 type="tel"
                 name="phone"
                 id="phone-number"
-                className="input-box"
+                className="input-box confirm"
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="08012345678"

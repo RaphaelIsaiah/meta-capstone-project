@@ -31,7 +31,8 @@ ul li {
 button .a-tag,
 li .a-tag,
 .Order-link,
-.seat-choice, .form-btn {
+.seat-choice,
+.form-btn {
   text-decoration: none;
   font-family: "Karla", sans-serif;
   font-size: 18px;
@@ -418,7 +419,9 @@ main {
   max-width: 40%;
   /* background-color: #928c6f; */
 }
-.About-text p, .A-ll, .A-ch {
+.About-text p,
+.A-ll,
+.A-ch {
   text-align: left;
 }
 .About-images {
@@ -627,12 +630,20 @@ textarea {
   box-sizing: border-box;
   font-weight: 500;
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
+.confirm:-webkit-autofill,
+.confirm:-webkit-autofill:hover,
+.confirm:-webkit-autofill:focus,
+.confirm:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
 }
+.confirm:focus:invalid {
+  /* border: 2px solid red; */
+  box-shadow: 0 0 5px 1px red;
+}
+/* input::after:invalid{
+  border: 2px solid red;
+} */
+/* input:focus:invalid */
 .row {
   /* background-color: #f80539; */
   display: flex;
@@ -655,7 +666,7 @@ textarea {
   width: 100%;
   max-width: 100%;
 }
-textarea{
+textarea {
   padding: 0.7rem 1rem;
 }
 .form-btn {
@@ -672,16 +683,45 @@ textarea{
   cursor: pointer;
   /* background-color: #f80539; */
 }
-.form-btn:hover{
+.form-btn:hover {
   background-color: #fbdabb;
   cursor: pointer;
 }
-.form-btn:disabled{
+.form-btn:disabled {
   /* background-color: #f4cf14b2; */
   /* color: #333333b4; */
   cursor: not-allowed;
 }
-
+/* ---- Booking Confirmed ---- */
+.overlay {
+  /* background-color: #f5b7e6; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 10px solid #edefee;
+}
+.circle-container {
+  /* background-color: #edefee; */
+  width: 25%;
+  margin: auto;
+}
+.circle-container img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 300px;
+}
+.overlay h1 {
+  margin: 3rem 0 3rem;
+}
+.back {
+  width: max-content;
+}
+.middle {
+  margin: auto;
+}
 /* Media Queries */
 @media only screen and (max-width: 810px) {
   /* ---- Header Section--- */
@@ -731,7 +771,7 @@ textarea{
     border-radius: 16px;
   }
   /* ---Main-Specials section--- */
-  .Main-specials{
+  .Main-specials {
     width: 100%;
   }
   .Meal-display {
@@ -818,20 +858,20 @@ textarea{
     max-width: 100%;
   }
   /* ---- Footer ----- */
-  .Footer-closure{
+  .Footer-closure {
     flex-flow: column;
     width: 100%;
   }
-  .footer-logo{
+  .footer-logo {
     max-width: 30%;
     min-width: 30%;
   }
-.fnav-container{
-  width: 100%;
-  justify-content: space-between;
-  padding: 0;
-}
-.fnav{
-  margin: 1vh auto;
- }
+  .fnav-container {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .fnav {
+    margin: 1vh auto;
+  }
 }

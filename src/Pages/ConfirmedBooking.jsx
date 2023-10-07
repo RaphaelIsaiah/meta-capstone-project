@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import Nav from "../Components/Nav";
 import Testimonials from "../Components/Testimonials";
 import Footer from "../Components/Footer";
+import ConfirmDisplay from "../Components/ConfirmDisplay";
 
 function ConfirmedBooking() {
   return (
@@ -10,10 +11,10 @@ function ConfirmedBooking() {
       <Header />
       <Nav />
       <main className="Main-container">
-        <p>Booking Confirmed!!!</p>
-        <p>See you soon</p>
+      <ConfirmDisplay />
         <Testimonials />
       </main>
+
       <Footer />
     </div>
   );
