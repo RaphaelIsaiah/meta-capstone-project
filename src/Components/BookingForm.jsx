@@ -12,11 +12,14 @@ function BookingForm({ state, dispatch, submitForm }) {
     email: "",
     date: new Date().toISOString().split("T")[0],
     diners: "4",
-    occasion: "Anniversary",
+    occasion: occasions[1],
     time: "17:00",
     comment: "",
   });
 
+  //Function to disable the submit button if fields have not been filled.
+  const isFormValid = () =>
+    form.fname && form.lname && form.phone && form.email !== "";
   // Update the BookingForm component to dispatch the state change when the date form field is changed.
   const handleDateChange = (event) => {
     const { name, value } = event.target;
@@ -75,6 +78,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                     indoor: e.target.checked,
                   })
                 }
+                required
                 // I think I have solved the state and resetting problem of the radio buttons.
                 // But is there a way to check if this is correct?
               />
@@ -94,6 +98,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                     outdoor: e.target.checked,
                   })
                 }
+                required
               />
               <label htmlFor="outdoor" className="seat-choice">
                 Outdoor Seating
@@ -112,6 +117,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 className="input-box"
                 value={form.date}
                 onChange={handleDateChange}
+                required
               />
             </div>
             <div className="time col">
@@ -122,6 +128,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 name="time"
                 value={form.time}
                 onChange={handleChange}
+                required
               >
                 {state.map((opt) => (
                   <option key={opt}>{opt}</option>
@@ -139,6 +146,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 name="occasion"
                 value={form.occasion}
                 onChange={handleChange}
+                required
               >
                 {occasions.map((occasion) => (
                   <option data-testid="booking-occasion-option" key={occasion}>
@@ -158,6 +166,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.diners}
                 name="diners"
                 onChange={handleChange}
+                required
               />
             </div>
             <div className="comment col">
@@ -191,6 +200,9 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.fname}
                 onChange={handleChange}
                 placeholder="John"
+                required
+                pattern="[a-z]{2-15}"
+                title="Please input a name"
               />
             </div>
 
@@ -204,6 +216,9 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.lname}
                 onChange={handleChange}
                 placeholder="Doe"
+                required
+                pattern="[a-z]{3-15}"
+                title="Please input a name"
               />
             </div>
           </div>
@@ -219,6 +234,7 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="johndoe@exmail.com"
+                required
               />
             </div>
 
@@ -232,12 +248,21 @@ function BookingForm({ state, dispatch, submitForm }) {
                 value={form.phone}
                 onChange={handleChange}
                 placeholder="08012345678"
+                required
+                pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
+                title="Phone number should be eleven digits"
+                maxLength={11}
               />
             </div>
           </div>
         </fieldset>
 
-        <button type="submit" className="form-btn">
+        <button
+          type="submit"
+          className="form-btn"
+          disabled={!isFormValid()}
+          onSubmit={handleSubmit}
+        >
           CONFIRM RESERVATION
         </button>
       </form>

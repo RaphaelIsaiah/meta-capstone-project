@@ -676,6 +676,11 @@ textarea{
   background-color: #fbdabb;
   cursor: pointer;
 }
+.form-btn:disabled{
+  /* background-color: #f4cf14b2; */
+  /* color: #333333b4; */
+  cursor: not-allowed;
+}
 
 /* Media Queries */
 @media only screen and (max-width: 810px) {
