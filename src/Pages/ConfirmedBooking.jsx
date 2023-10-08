@@ -11,7 +11,7 @@ function ConfirmedBooking() {
       <Header />
       <Nav />
       <main className="Main-container">
-      <ConfirmDisplay />
+        <ConfirmDisplay />
         <Testimonials />
       </main>
 

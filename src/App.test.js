@@ -1,37 +1,53 @@
-import { render, screen } from "@testing-library/react";
-import App from "./App";
-import BookingForm from "./Components/BookingForm";
-import Specials from "./Components/Specials";
-import Hero from "./Components/Hero";
-import Testimonials from "./Components/Testimonials";
-import BookingPage from "./Pages/BookingPage";
-import Nav from "./Components/Nav";
-import Footer from "./Components/Footer";
-import { Link } from "react-router-dom";
-import About from "./Components/About";
+import { render, screen } from '@testing-library/react';
+import App from './App';
 
-// I am lost here. I don't understand how to write the tests correctly.
+test('renders learn react link', () => {
+  render(<App />);
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
+//
 
-test("the text renders correctly", () => {
-  render(<Specials/>);
 
-  const element = screen.getByText(/weeks specials/i);
 
-  expect(element).toBeInTheDocument();
-})
 
-test("static text renders correctly", () => {
-  render(<About/>);
 
-  const element = screen.getByText(/little lemon/i);
 
-  expect(element).toBeInTheDocument();
-})
 
-// test("static text renders correctly", () => {
-//   render(<BookingForm/>);
+// import { render, screen } from "@testing-library/react";
+// import App from "./App";
+// import BookingForm from "./Components/BookingForm";
+// import Specials from "./Components/Specials";
+// import Hero from "./Components/Hero";
+// import Testimonials from "./Components/Testimonials";
+// import BookingPage from "./Pages/BookingPage";
+// import Nav from "./Components/Nav";
+// import Footer from "./Components/Footer";
+// import { Link } from "react-router-dom";
+// import About from "./Components/About";
 
-//   const element = screen.getByText(/confirmation details/i);
+// // I am lost here. I don't understand how to write the tests correctly.
+
+// test("the text renders correctly", () => {
+//   render(<Specials/>);
+
+//   const element = screen.getByText(/weeks specials/i);
 
 //   expect(element).toBeInTheDocument();
 // })
+
+// test("static text renders correctly", () => {
+//   render(<About/>);
+
+//   const element = screen.getByText(/little lemon/i);
+
+//   expect(element).toBeInTheDocument();
+// })
+
+// // test("static text renders correctly", () => {
+// //   render(<BookingForm/>);
+
+// //   const element = screen.getByText(/confirmation details/i);
+
+// //   expect(element).toBeInTheDocument();
+// // })
